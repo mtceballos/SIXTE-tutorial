@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/472438177.svg)](https://zenodo.org/badge/latestdoi/472438177)
 
-**WARNING**: currently working in the update of SIXTE calls for [SIXTE v 3.0 BETA](https://www.sternwarte.uni-erlangen.de/sixte/)
+**WARNING**: UPDATED to SIXTE calls for [SIXTE v 3.0 BETA](https://www.sternwarte.uni-erlangen.de/sixte/)
 
 # SIXTE-tutorial
 Jupyter notebooks to illustrate and document practical examples and exercises for the tutorial part of the [SIXTE](http://www.sternwarte.uni-erlangen.de/research/sixte/index.php) simulator manual.
