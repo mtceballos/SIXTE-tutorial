@@ -8,7 +8,9 @@ Jupyter notebooks to illustrate and document practical examples and exercises fo
 
 To use these notebooks you must have SIXTE and [NASA's HEASOFT](https://heasarc.gsfc.nasa.gov/lheasoft/) installed and initiated.
 
-In addition, it is recommended that you create a `conda` environment:
+You will find three different tutorials for each case. The first is for the old version of SIXTE, titled `tutorial-general-intro.ipynb.` The second is for the latest version of SIXTE, renamed `tutorial-general-intro-2.0.ipynb.` In both cases, make sure to set the XML paths and, if necessary, download files from the SIXTE website. The third version of the Jupyter notebook is designed for running on SciServer, titled `tutorial-general-intro_SciServer.ipynb`, where all paths and the environment are preconfigured. Additionally, some files required for running simulations are already available, so you won't need to download them.
+
+It is also recommended to create a `conda` environment:
 
     >conda create --name tutorial python  
     >conda activate tutorial    
