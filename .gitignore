@@ -1,0 +1,15 @@
+# Ignore checkoutpoints and cache
+__pycache__
+.ipynb_checkpoints
+
+
+# Ignore all files with a specific extension
+*.xml
+*.xcm
+*.fits
+*.lc
+*.rmf
+*.arf
+*.pha
+*.gif
+*.reg
