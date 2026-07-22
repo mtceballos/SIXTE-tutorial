@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "newathena-sixte-extended-sources"
+version = "0.1.0"
+description = "Science-driven extended-source simulation and analysis tutorials for NewAthena with SIXTE."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "BSD-3-Clause"
+authors = [{ name = "Anna Trindade Falcao" }]
+dependencies = [
+  "astropy>=6.1",
+  "matplotlib>=3.9",
+  "numpy>=2.0",
+  "pandas>=2.2",
+  "pyyaml>=6.0",
+  "regions>=0.10",
+  "scipy>=1.14",
+]
+
+[project.optional-dependencies]
+notebook = ["ipykernel>=6", "jupyterlab>=4", "nbclient>=0.10", "nbformat>=5.10"]
+dev = ["build>=1.2", "mypy>=1.11", "pytest>=8", "ruff>=0.6"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.12"
+packages = ["newathena_sixte_extended_sources"]
+strict = true
+ignore_missing_imports = true

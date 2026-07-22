@@ -1,0 +1,33 @@
+name: newathena-sixte-extended-sources
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  # Native build/runtime dependencies for SIMPUT and SIXTE.
+  - boost-cpp
+  - c-compiler
+  - cgal
+  - cmake>=3.16
+  - cxx-compiler
+  - expat
+  - gmp
+  - gsl
+  - make
+  - mpfr
+  - ncurses
+  - ninja
+  - pkg-config
+  - readline
+  # Python analysis and notebook dependencies.
+  - astropy>=6.1
+  - ipykernel>=6
+  - jupyterlab>=4
+  - matplotlib>=3.9
+  - numpy>=2.0
+  - pandas>=2.2
+  - pyyaml>=6.0
+  - regions>=0.10
+  - scipy>=1.14
+  - pip:
+      - -e .[notebook,dev]

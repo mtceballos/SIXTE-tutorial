@@ -1,0 +1,11 @@
+method leven 10 0.01
+abund angr
+xsect vern
+cosmo 70 0 0.73
+xset delta 0.01
+systematic 0
+model  phabs*powerlaw
+              1      0.001          0          0     100000      1e+06
+            2.5       0.01         -3         -2          9         10
+              1       0.01          0          0      1e+20      1e+24
+bayes off

@@ -13,3 +13,7 @@ __pycache__
 *.pha
 *.gif
 *.reg
+
+# Versioned inputs for the NewAthena extended-source curriculum.
+!newathena-extended-sources/inputs/**/*.xcm
+!newathena-extended-sources/inputs/**/*.reg

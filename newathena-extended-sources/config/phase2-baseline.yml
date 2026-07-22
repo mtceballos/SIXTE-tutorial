@@ -1,0 +1,30 @@
+run_name: a2146_xifu_multispec_baseline
+instrument:
+  package: new-athena-xifu
+  version: 1.11.1
+  configuration: baseline/xifu_nofilt_infoc.xml
+  energy_resolution: 4 eV FWHM at 7 keV
+source:
+  name: Abell 2146
+  ra_deg: 239.064583333
+  dec_deg: 66.3470277776
+  pointing_ra_deg: 239.04
+  pointing_dec_deg: 66.36
+  flux_erg_s_cm2: 7.995076796356145e-12
+  flux_band_keV: [0.5, 10.0]
+  spectral_model: phabs*apec
+discretization:
+  temperature_bins: 8
+  temperature_scale: logarithmic
+  abundance_bins: 8
+  abundance_scale: linear
+spectral_grid:
+  minimum_keV: 0.1495
+  maximum_keV: 12.101
+  bins: 47806
+  rationale: Half-bin padding beyond the 0.15-12.100345 keV ARF range.
+simulation:
+  baseline_exposure_s: 1000
+  workshop_full_exposure_s: 100000
+  seed: 20260721
+  background: false

@@ -1,0 +1,44 @@
+run_name: xifu_two_component_spatial_spectral_mixing
+instrument:
+  package: new-athena-xifu
+  version: 1.11.1
+  configuration: baseline/xifu_nofilt_infoc.xml
+  response_release: 1.4.1
+  energy_resolution: 4 eV FWHM at 7 keV
+source:
+  morphology: flat 3 arcmin diameter circle split into east and west hemispheres
+  ra_deg: 45.0
+  dec_deg: 0.0
+  pointing_ra_deg: 45.0
+  pointing_dec_deg: 0.0
+  components:
+    east_soft:
+      source_id: 1
+      model: phabs*powerlaw
+      nH_1e22_cm2: 1.0
+      photon_index: 2.5
+      flux_erg_s_cm2: 2.0e-11
+      flux_band_keV: [2.0, 10.0]
+    west_hard:
+      source_id: 2
+      model: phabs*powerlaw
+      nH_1e22_cm2: 1.0
+      photon_index: 1.5
+      flux_erg_s_cm2: 2.0e-11
+      flux_band_keV: [2.0, 10.0]
+spectral_grid:
+  minimum_keV: 0.1495
+  maximum_keV: 12.101
+  bins: 47806
+  rationale: Half-bin padding beyond the 0.15-12.100345 keV X-IFU ARF range.
+simulation:
+  pilot_exposure_s: 1000
+  full_exposure_s: 100000
+  seed: 20260722
+  background: false
+analysis:
+  fit_band_keV: [1.0, 12.0]
+  statistic: cstat
+  absorption_abundance: angr
+  absorption_cross_sections: vern
+  arf_photon_trials: [10000, 50000, 100000]
