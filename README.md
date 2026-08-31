@@ -23,5 +23,13 @@ In some environments you need to install also this package to avoid compatibilit
 
 A different set of additional packages may be required by your specific local configuration
 
+## NewAthena extended-source science notebooks
+
+The validated NewAthena X-IFU extended-source sequence is available in
+[`newathena-extended-sources/`](newathena-extended-sources/README.md). It covers
+runtime readiness, spatially varying cluster plasma, event-level spatial and
+spectral mixing, naive-fit bias, and simultaneous source-to-region response
+modeling. Separate teaching and reference profiles share the same science
+logic.
 
 

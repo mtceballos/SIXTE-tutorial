@@ -1,0 +1,26 @@
+schema_version: 1
+environment:
+  project_root: NEWATHENA_PROJECT_ROOT
+  runtime_directory: NEWATHENA_RUNTIME_DIR
+  input_directory: NEWATHENA_INPUT_DIR
+  compute_profile: NEWATHENA_PROFILE
+profiles:
+  reference:
+    phase2_exposure_s: 100000
+    phase3_exposure_s: 100000
+    phase3_arf_photons: 100000
+    science_status: validated_reference
+  teaching:
+    phase2_exposure_s: 1000
+    phase3_exposure_s: 1000
+    phase3_arf_photons: 10000
+    science_status: demonstration_only
+platforms:
+  local:
+    description: Repository-local environment, inputs, and generated runtime.
+    required_overrides: []
+  sciserver:
+    description: External runtime and data paths supplied by the user session.
+    required_overrides:
+      - NEWATHENA_RUNTIME_DIR
+      - NEWATHENA_INPUT_DIR
